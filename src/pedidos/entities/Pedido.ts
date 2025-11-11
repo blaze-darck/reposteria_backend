@@ -1,11 +1,11 @@
 import { Entity, Column, ManyToOne, OneToMany } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { Usuario } from "../../usuarios/entities/Usuario";
 import { DetallePedido } from "../entities/DetallePedido";
 import { Pago } from "../../pagos/entities/Pago";
 
 @Entity()
-export class Pedido extends BaseEntityAudit {
+export class Pedido extends Auditoria {
   @ManyToOne(() => Usuario, (usuario) => usuario.perfilCliente, {
     onDelete: "RESTRICT",
   })

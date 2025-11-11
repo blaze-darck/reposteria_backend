@@ -1,10 +1,10 @@
 import { Entity, ManyToOne, Column } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { Pedido } from "./Pedido";
 import { Producto } from "../../productos/entities/Producto";
 
 @Entity()
-export class DetallePedido extends BaseEntityAudit {
+export class DetallePedido extends Auditoria {
   @ManyToOne(() => Pedido, (pedido) => pedido.detalles, { onDelete: "CASCADE" })
   pedido!: Pedido;
 
