@@ -1,10 +1,10 @@
 import { Entity, Column, OneToMany } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { ProductoIngrediente } from "./ProductoIngrediente";
 import { InventarioIngrediente } from "../../inventario/entities/InventarioIngredientes";
 
 @Entity()
-export class Ingrediente extends BaseEntityAudit {
+export class Ingrediente extends Auditoria {
   @Column({ length: 100 })
   nombre!: string;
 

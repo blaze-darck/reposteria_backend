@@ -1,11 +1,11 @@
 import { Entity, Column, ManyToOne, OneToMany } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { Categoria } from "../entities/Categoria";
 import { ProductoIngrediente } from "./ProductoIngrediente";
 import { DetallePedido } from "../../pedidos/entities/DetallePedido";
 
 @Entity()
-export class Producto extends BaseEntityAudit {
+export class Producto extends Auditoria {
   @Column({ length: 100 })
   nombre!: string;
 
