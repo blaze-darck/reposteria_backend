@@ -1,9 +1,9 @@
 import { Entity, ManyToOne, Column, CreateDateColumn } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { Ingrediente } from "../../productos/entities/Ingrediente";
 
 @Entity()
-export class InventarioIngrediente extends BaseEntityAudit {
+export class InventarioIngrediente extends Auditoria {
   @ManyToOne(() => Ingrediente, (ingrediente) => ingrediente.inventario, {
     onDelete: "CASCADE",
   })
