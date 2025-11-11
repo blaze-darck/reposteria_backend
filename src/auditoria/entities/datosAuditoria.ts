@@ -3,20 +3,24 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
 } from "typeorm";
 
-export abstract class BaseEntityAudit {
+export abstract class Auditoria {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column({ length: 100, nullable: true })
-  usuarioCreacion!: string | null;
+  @ManyToOne("Usuario", { nullable: true })
+  @JoinColumn({ name: "usuarioCreacionId" })
+  usuarioCreacion?: any;
 
   @CreateDateColumn()
   fechaCreacion!: Date;
 
-  @Column({ length: 100, nullable: true })
-  usuarioModificacion!: string | null;
+  @ManyToOne("Usuario", { nullable: true })
+  @JoinColumn({ name: "usuarioModificacionId" })
+  usuarioModificacion?: any;
 
   @UpdateDateColumn()
   fechaModificacion!: Date;
