@@ -1,10 +1,10 @@
 import { Entity, Column, OneToMany, OneToOne, JoinColumn } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { UsuarioRol } from "../entities/UsuarioRol";
-import { PerfilCliente } from "../entities/Cliente";
+import { Cliente } from "../entities/Cliente";
 
 @Entity()
-export class Usuario extends BaseEntityAudit {
+export class Usuario extends Auditoria {
   @Column({ length: 100 })
   nombre!: string;
 
@@ -23,6 +23,6 @@ export class Usuario extends BaseEntityAudit {
   @OneToMany(() => UsuarioRol, (usuarioRol) => usuarioRol.usuario)
   roles!: UsuarioRol[];
 
-  @OneToOne(() => PerfilCliente, (perfil) => perfil.usuario)
-  perfilCliente!: PerfilCliente;
+  @OneToOne(() => Cliente, (perfil) => perfil.usuario)
+  perfilCliente!: Cliente;
 }

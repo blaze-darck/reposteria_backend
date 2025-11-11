@@ -1,11 +1,11 @@
 import { Entity, ManyToOne, Unique } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { Usuario } from "./Usuario";
 import { Rol } from "./Rol";
 
 @Entity()
 @Unique(["usuario", "rol"])
-export class UsuarioRol extends BaseEntityAudit {
+export class UsuarioRol extends Auditoria {
   @ManyToOne(() => Usuario, (usuario) => usuario.roles, { onDelete: "CASCADE" })
   usuario!: Usuario;
 

@@ -1,9 +1,9 @@
 import { Entity, Column, OneToMany } from "typeorm";
-import { BaseEntityAudit } from "../../auditoria/entities/datosAuditoria";
+import { Auditoria } from "../../auditoria/entities/datosAuditoria";
 import { UsuarioRol } from "../entities/UsuarioRol";
 
 @Entity()
-export class Rol extends BaseEntityAudit {
+export class Rol extends Auditoria {
   @Column({ length: 50, unique: true })
   nombre!: string;
 
