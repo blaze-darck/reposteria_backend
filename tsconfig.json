@@ -1,27 +1,25 @@
 {
   "compilerOptions": {
-    // Estructura de archivos
-    "rootDir": "./src",
-    "outDir": "./build",
-
-    // Configuración del entorno Node.js
-    "target": "ES2020",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolvePackageJsonExports": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "types": ["node"],
-
-    // Archivos de salida
-    "sourceMap": true,
+    "isolatedModules": true,
     "declaration": true,
-    "declarationMap": true,
-
-    // Reglas de validación
-    "strict": true,
-    "skipLibCheck": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  },
-  "include": ["src"]
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2023",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false
+  }
 }
