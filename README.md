@@ -103,8 +103,6 @@ pnpm run start
 
 El servidor estará disponible en: `http://localhost:3000`
 
-## 👥 Autor
+## Autor
 
 - **Blaze Darck** - [GitHub](https://github.com/blaze-darck)
-
-Si este proyecto te fue útil, considera darle una estrella en GitHub
