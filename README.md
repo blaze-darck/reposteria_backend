@@ -62,8 +62,8 @@ pnpm install
 Abre tu cliente MySQL y ejecuta:
 
 ```sql
-CREATE DATABASE reposteria_db;
-USE reposteria_db;
+CREATE DATABASE reposteriaDB;
+USE reposteriaDB;
 ```
 
 ### 2. Configurar variables de entorno
