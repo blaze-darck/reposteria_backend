@@ -106,8 +106,4 @@ export async function subcategoriaSeed(dataSource: DataSource) {
       );
     }
   }
-
-  console.log('Subcategorías creadas correctamente');
-  const lista = await subcategoriaRepo.find({ relations: ['categoria'] });
-  console.log('Lista final de subcategorías:', lista);
 }
